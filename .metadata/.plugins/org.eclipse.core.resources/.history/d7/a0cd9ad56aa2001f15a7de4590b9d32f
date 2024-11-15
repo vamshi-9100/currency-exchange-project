@@ -1,0 +1,5 @@
+package com.eureka.client.repository;
+
+public interface CurrencyExchangeRepository extends jpa {
+
+}

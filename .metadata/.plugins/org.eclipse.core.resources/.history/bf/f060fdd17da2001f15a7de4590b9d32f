@@ -1,0 +1,9 @@
+package com.eureka.client.incoming;
+
+public class currencyexchange {
+	private Long id;
+	private String fromCurrency;
+	private String toCurrency;
+	private String conversion_multiple;
+
+}

@@ -1,0 +1,5 @@
+package com.eureka.client.feighclient;
+
+public interface feighclientcode {
+
+}

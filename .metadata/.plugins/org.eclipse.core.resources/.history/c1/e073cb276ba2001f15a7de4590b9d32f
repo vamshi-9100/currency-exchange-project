@@ -1,0 +1,12 @@
+package com.eureka.client.entity;
+
+import jakarta.persistence.Entity;
+
+@Entity
+public class CurrencyExchangeEntity {
+	private Long id;
+	private String fromcurrency;
+	private String tocurrency;
+	private double conversionMultiple;
+
+}

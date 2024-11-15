@@ -1,0 +1,8 @@
+-- Insert some sample data into the currency_conversion table
+
+INSERT INTO currency_conversion (id,fromcurrency, tocurrency,conversion_multiple)
+VALUES
+    (101,'USD', 'INR',89.0),
+    (103'CAD', 'INR',150.0),
+    (102'EUR', 'INR',57.0),
+    (104'DARAM', 'INR',20.0);

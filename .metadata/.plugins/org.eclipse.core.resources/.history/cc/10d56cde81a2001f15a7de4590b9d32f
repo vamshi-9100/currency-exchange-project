@@ -1,0 +1,13 @@
+package com.eureka.client.feighclient;
+
+import org.springframework.cloud.openfeign.FeignClient;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+
+import com.eureka.client.incoming.currencyexchange;
+@FeignClient(name="currencyExchangeService",url="http://localhost:8002")
+public interface feighclientcode {
+	@GetMapping("/api/v1/fromCurrency/{fromcurrency}/toCurrency/{tocurrency}")
+ currencyexchange retrivethevalues(@PathVariable String fromcurrency,@PathVariable String tocurrency);
+
+}

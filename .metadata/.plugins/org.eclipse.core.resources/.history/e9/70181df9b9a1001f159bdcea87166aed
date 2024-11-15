@@ -1,0 +1,50 @@
+package com.eureka.client.controller;
+
+import java.time.LocalDateTime;
+import java.util.List;
+
+import org.apache.hc.core5.http.HttpStatus;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.eureka.client.entity.CurrencyServiceEntity;
+import com.eureka.client.repository.CurrencyServiceRepository;
+
+@RestController
+@RequestMapping
+public class CurrencyServiceController {
+	@Autowired
+	CurrencyServiceRepository repository;
+	@GetMapping("/from/{from}/to/{to}/quantity/{quantity}")
+	public ResponseEntity<?> getdata(@PathVariable String from,String to,int quantity)
+	{
+		CurrencyServiceEntity entity=new CurrencyServiceEntity();
+		double conversionrate=87.5;
+		
+		double total=conversionrate*quantity;
+		entity.setFromcurrency(from);
+		entity.setTocurrency(to);
+		entity.setConversionMultiple(conversionrate);
+		entity.setQuantity(quantity);
+		entity.setTotalAmount(total);
+		entity.setDatetime(LocalDateTime.now());
+		repository.save(entity);
+		
+		
+		return ResponseEntity.status(HttpStatus.SC_ACCEPTED)
+							.header("status","successful")
+							.body(e);
+		}
+		
+		
+		
+
+		
+		
+	}
+
+}

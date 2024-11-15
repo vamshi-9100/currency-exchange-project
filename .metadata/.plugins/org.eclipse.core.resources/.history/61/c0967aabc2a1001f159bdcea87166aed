@@ -1,0 +1,25 @@
+spring.application.name=CurrencyExchangeService
+server.port=8002
+eureka.client.register-with-eureka=true
+eureka.client.fetch-registry=true
+eureka.client.service-url.defaultzone=http://localhost:8761/eureka
+
+
+
+# H2 Database Configuration (in-memory database)
+spring.datasource.url=jdbc:h2:mem:testdb
+spring.datasource.driverClassName=org.h2.Driver
+spring.datasource.username=sa
+spring.datasource.password=vamshi
+
+# H2 Console Settings (enable and set path)
+spring.h2.console.path=/h2-console
+
+
+# Hibernate Properties(generates compactable sql statements that are compactable with the database)
+spring.jpa.database-platform=org.hibernate.dialect.H2Dialect
+
+# Show SQL Queries in Console (optional)
+spring.jpa.show-sql=true
+#format the queries(optional)
+spring.jpa.properties.hibernate.format_sql=true

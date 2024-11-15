@@ -1,0 +1,9 @@
+package com.eureka.client.repository;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+
+import com.eureka.client.entity.CurrencyExchangeEntity;
+
+public interface CurrencyExchangeRepository extends JpaRepository<CurrencyExchangeEntity, Long> {
+
+}

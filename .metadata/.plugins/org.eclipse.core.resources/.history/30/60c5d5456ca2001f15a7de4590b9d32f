@@ -1,0 +1,12 @@
+package com.eureka.client.controller;
+
+import org.springframework.web.bind.annotation.RestController;
+
+@RestController
+@request
+public class CurrencyExchangeController {
+	@autowired
+	CurrencyExchangeRepository repo;
+	
+
+}

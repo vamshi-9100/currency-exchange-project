@@ -1,0 +1,8 @@
+-- Insert some sample data into the currency_conversion table
+
+INSERT INTO currency_conversion (fromcurrency, tocurrency, conversion_multiple, quantity, total_amount, datetime)
+VALUES
+    ('USD', 'EUR', 0.85, 100, 85.00, '2024-11-13 10:30:00'),
+    ('USD', 'GBP', 0.75, 200, 150.00, '2024-11-13 11:00:00'),
+    ('EUR', 'USD', 1.18, 50, 59.00, '2024-11-13 12:00:00'),
+    ('INR', 'USD', 0.012, 5000, 60.00, '2024-11-13 14:15:00');
